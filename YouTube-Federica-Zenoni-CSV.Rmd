@@ -1,0 +1,46 @@
+---
+title: "Read CSVF ederica-Zenoni"
+author: "David Jackson"
+date: "10/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(data.table)
+##
+### Raad EXcel
+library(readxl)
+##
+library(ggplot2)
+library(scales)
+```
+
+### Import Using Base R: read.csv()
+
+```{r}
+A <- read.csv("./cr6e-iitb.csv")
+str(A)
+```
+
+### Import using tidyverse/readr
+
+```{r}
+B <- read_csv("./cr6e-iitb.csv")
+```
+
+### Import using data.table
+
+```{r}
+C <- fread("./cr6e-iitb.csv")
+str(C)
+```
+
+### Import using Tidayverse/readxl 
+
+```{r}
+D <- read_xlsx("./cr6e-iitb-Excel.xlsx")
+str(D)
+```
+
